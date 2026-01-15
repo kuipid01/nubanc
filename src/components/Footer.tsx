@@ -6,21 +6,21 @@ const Footer: React.FC = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="flex flex-col">
-                        <div className="flex items-center gap-2.5 text-2xl font-extrabold text-white tracking-tighter mb-8">
-                            <div className="w-3 h-3 bg-accent-gold rounded-[2px] rotate-45" />
-                            Nubanc
+                        <div className='bg-white w-fit px-2 h-fit mb-20 py-1 rounded-full'>
+                            <img src="/src/assets/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
+
                         </div>
+
                         <p className="text-white/60 max-w-xs leading-relaxed">
-                            Nubanc Labs Ltd. Your all-in-one finance hub for entrepreneurs, startups, and growing businesses.
+                            nubanc Labs Ltd. Your all-in-one finance hub for entrepreneurs, startups, and growing businesses.
                         </p>
                     </div>
 
                     <div>
                         <h4 className="text-xl font-bold mb-8">Contact Info</h4>
-                        <ul className="space-y-4 text-white/60 uppercase text-sm tracking-wide">
+                        <ul className="space-y-4 text-white/60 text-sm tracking-wide">
                             <li>📞 09032830995</li>
                             <li>📧 info@nubanclabs.com</li>
-                            <li className="normal-case">📍 No physical office yet</li>
                         </ul>
                     </div>
 
@@ -36,15 +36,15 @@ const Footer: React.FC = () => {
 
                     <div>
                         <h4 className="text-xl font-bold mb-8">Follow Us</h4>
-                        <p className="text-white/60 leading-relaxed">
+                        {/* <p className="text-white/60 leading-relaxed">
                             Coming soon on Instagram and LinkedIn.
-                        </p>
+                        </p> */}
                     </div>
                 </div>
 
                 <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-sm">
-                    <p>© 2026 Nubanc Labs Ltd. All rights reserved.</p>
-                    <p>Registered Name: Nubanc Labs Ltd</p>
+                    <p>© 2026 nubanc Labs Ltd. All rights reserved.</p>
+                    <p>Registered Name: nubanc Labs Ltd</p>
                 </div>
             </div>
         </footer>

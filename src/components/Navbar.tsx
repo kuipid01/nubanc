@@ -14,10 +14,7 @@ const Navbar: React.FC = () => {
 
     return (
         <header className={`fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-6 md:px-16 z-1000 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-            <div className="flex items-center gap-2.5 text-2xl font-extrabold text-primary-navy tracking-tighter">
-                <div className="w-3 h-3 bg-accent-gold rounded-[2px] rotate-45" />
-                Nubanc
-            </div>
+            <img src="/src/assets/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">

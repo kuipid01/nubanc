@@ -7,18 +7,18 @@ const About: React.FC = () => {
                 {/* LEFT SIDE */}
                 <div className="w-full lg:w-[60%]">
                     <span className="text-accent-gold text-sm font-bold uppercase tracking-widest mb-4 block">
-                        About Nubanc
+                        About nubanc
                     </span>
 
                     <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.2]">
-                        Nubanc helps businesses stay financially organized, compliant, and ready to grow.
+                        nubanc helps businesses stay financially organized, compliant, and ready to grow.
                     </h2>
                 </div>
 
                 {/* RIGHT SIDE */}
                 <div className="w-full lg:w-[40%] text-white/80 text-lg md:text-xl leading-relaxed font-medium space-y-6">
                     <p>
-                        Nubanc is your all-in-one finance hub for entrepreneurs, startups, and
+                        nubanc is your all-in-one finance hub for entrepreneurs, startups, and
                         growing businesses. We simplify your finances with clean bookkeeping,
                         tax compliance, financial reporting, and expert advisory.
                     </p>

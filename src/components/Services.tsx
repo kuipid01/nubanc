@@ -29,7 +29,7 @@ const services: ServiceItem[] = [
         desc: 'WHT, VAT, PAYE, CIT, NSITF, ITF, and more. We handle computations and filings ensuring full compliance and peace of mind.'
     },
     {
-        title: 'Nubanc FinanceOS',
+        title: 'nubanc FinanceOS',
         icon: '🚀',
         desc: 'Coming Soon: Our innovative financial operations platform providing credit management, financial automation, and business insights.',
         tag: 'COMING SOON'
@@ -42,7 +42,7 @@ const Services: React.FC = () => {
             <div className="max-w-7xl mx-auto">
                 <div className='max-w-4xl'>
                     <p className='mb-8 text-4xl md:text-5xl lg:text-7xl font-semibold text-primary-navy leading-[1.1]'>Structure your finances. Grow with confidence.</p>
-                    <p className='mb-16 text-text-gray text-lg md:text-xl font-medium leading-relaxed'>At Nubanc, we help entrepreneurs, startups, and growing businesses stay on top of their numbers through clean bookkeeping, tax compliance, financial reporting, and expert finance advisory—so you can make smarter decisions and scale with clarity.</p>
+                    <p className='mb-16 text-text-gray text-lg md:text-xl font-medium leading-relaxed'>At nubanc, we help entrepreneurs, startups, and growing businesses stay on top of their numbers through clean bookkeeping, tax compliance, financial reporting, and expert finance advisory—so you can make smarter decisions and scale with clarity.</p>
 
                 </div>
 
