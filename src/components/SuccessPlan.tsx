@@ -65,7 +65,7 @@ const SuccessPlan: React.FC = () => {
                             <motion.img
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.7 }}
-                                src="/src/assets/Financial-Planning-Smart-Image.webp"
+                                src="/todo.webp"
                                 alt="Financial graphs"
                                 className="w-full h-auto object-cover"
                             />
