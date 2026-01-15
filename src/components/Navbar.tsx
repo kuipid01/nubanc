@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.5 }}
             className={`fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-6 md:px-16 z-1000 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}
         >
-            <img src="/src/assets/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
+            <img src="/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">

@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="flex flex-col">
                         <div className='bg-white w-fit px-2 h-fit mb-20 py-1 rounded-full'>
-                            <img src="/src/assets/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
+                            <img src="/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
                         </div>
 
                         <p className="text-white/60 max-w-xs leading-relaxed">
