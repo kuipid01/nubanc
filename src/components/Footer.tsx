@@ -1,14 +1,20 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#0f0b1a] text-white pt-24 pb-12 px-6 md:px-16">
-            <div className="max-w-7xl mx-auto">
+        <footer className="bg-[#0f0b1a] text-white pt-24 pb-12 px-6 md:px-16 overflow-hidden">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="max-w-7xl mx-auto"
+            >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="flex flex-col">
                         <div className='bg-white w-fit px-2 h-fit mb-20 py-1 rounded-full'>
                             <img src="/src/assets/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
-
                         </div>
 
                         <p className="text-white/60 max-w-xs leading-relaxed">
@@ -36,9 +42,6 @@ const Footer: React.FC = () => {
 
                     <div>
                         <h4 className="text-xl font-bold mb-8">Follow Us</h4>
-                        {/* <p className="text-white/60 leading-relaxed">
-                            Coming soon on Instagram and LinkedIn.
-                        </p> */}
                     </div>
                 </div>
 
@@ -46,7 +49,7 @@ const Footer: React.FC = () => {
                     <p>© 2026 nubanc Labs Ltd. All rights reserved.</p>
                     <p>Registered Name: nubanc Labs Ltd</p>
                 </div>
-            </div>
+            </motion.div>
         </footer>
     );
 };

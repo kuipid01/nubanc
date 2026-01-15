@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, Variants } from 'framer-motion';
 
 interface ServiceItem {
     title: string;
@@ -37,21 +38,52 @@ const services: ServiceItem[] = [
 ];
 
 const Services: React.FC = () => {
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" }
+        }
+    };
+
     return (
         <section id="services" className="py-24 px-6 md:px-16 bg-gray-50">
             <div className="max-w-7xl mx-auto">
-                <div className='max-w-4xl'>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='max-w-4xl'
+                >
                     <p className='mb-8 text-4xl md:text-5xl lg:text-7xl font-semibold text-primary-navy leading-[1.1]'>Structure your finances. Grow with confidence.</p>
                     <p className='mb-16 text-text-gray text-lg md:text-xl font-medium leading-relaxed'>At nubanc, we help entrepreneurs, startups, and growing businesses stay on top of their numbers through clean bookkeeping, tax compliance, financial reporting, and expert finance advisory—so you can make smarter decisions and scale with clarity.</p>
+                </motion.div>
 
-                </div>
-
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     {services.map((service, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="bg-white p-10 rounded-[24px] border border-gray-100 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative group"
+                            variants={itemVariants}
+                            whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
+                            className="bg-white p-10 rounded-[24px] border border-gray-100 shadow-sm transition-shadow duration-300 relative group cursor-default"
                         >
                             {service.tag && (
                                 <span className="absolute top-5 right-5 bg-primary-navy text-accent-gold text-[10px] font-bold px-2 py-1 rounded tracking-wider">
@@ -63,9 +95,9 @@ const Services: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-bold text-primary-navy mb-4">{service.title}</h3>
                             <p className="text-text-gray leading-relaxed">{service.desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

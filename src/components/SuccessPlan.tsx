@@ -1,11 +1,18 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const SuccessPlan: React.FC = () => {
     return (
-        <section className="py-24 px-6 md:px-16">
+        <section className="py-24 px-6 md:px-16 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
-                    <div className="flex-1 text-left">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="flex-1 text-left"
+                    >
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-navy mb-8 leading-tight">
                             Plan and Manage for Success
                         </h2>
@@ -14,44 +21,56 @@ const SuccessPlan: React.FC = () => {
                         </p>
 
                         <div className="space-y-6">
-                            <div className="flex items-start gap-4">
-                                <div className="w-6 h-6 bg-accent-gold/20 text-accent-gold rounded-full flex items-center justify-center shrink-0 text-xs font-black">
-                                    ✓
-                                </div>
-                                <div>
-                                    <strong className="block text-primary-navy text-lg mb-1">Financial Modelling</strong>
-                                    <p className="text-text-gray text-base">Robust models to project your business growth.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-6 h-6 bg-accent-gold/20 text-accent-gold rounded-full flex items-center justify-center shrink-0 text-xs font-black">
-                                    ✓
-                                </div>
-                                <div>
-                                    <strong className="block text-primary-navy text-lg mb-1">Budgeting & Forecasting</strong>
-                                    <p className="text-text-gray text-base">Stay ahead of costs and plan your cash inflows.</p>
-                                </div>
-                            </div>
+                            {[
+                                { title: "Financial Modelling", desc: "Robust models to project your business growth." },
+                                { title: "Budgeting & Forecasting", desc: "Stay ahead of costs and plan your cash inflows." }
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 + i * 0.1 }}
+                                    className="flex items-start gap-4"
+                                >
+                                    <div className="w-6 h-6 bg-accent-gold/20 text-accent-gold rounded-full flex items-center justify-center shrink-0 text-xs font-black">
+                                        ✓
+                                    </div>
+                                    <div>
+                                        <strong className="block text-primary-navy text-lg mb-1">{item.title}</strong>
+                                        <p className="text-text-gray text-base">{item.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
                         </div>
 
-                        <button
-                            className="mt-12 bg-accent-gold text-primary-navy px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-accent-gold-hover hover:-translate-y-0.5 shadow-[0_4px_15px_rgba(212,175,55,0.3)]"
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="mt-12 bg-accent-gold text-primary-navy px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-accent-gold-hover shadow-[0_4px_15px_rgba(212,175,55,0.3)]"
                             onClick={() => window.open('https://wa.me/2349032830995')}
                         >
                             WhatsApp Chat
-                        </button>
-                    </div>
+                        </motion.button>
+                    </motion.div>
 
-                    <div className="flex-1 w-full">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="flex-1 w-full"
+                    >
                         <div className="rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.1)]">
-                            <img
+                            <motion.img
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.7 }}
                                 src="/src/assets/Financial-Planning-Smart-Image.webp"
                                 alt="Financial graphs"
-                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                className="w-full h-auto object-cover"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
