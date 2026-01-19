@@ -58,7 +58,7 @@ const Services: React.FC = () => {
     };
 
     return (
-        <section id="services" className="py-24 px-6 md:px-16 bg-gray-50">
+        <section id="services" className="py-16 px-6 md:px-16 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Services: React.FC = () => {
                     className='max-w-4xl'
                 >
                     <p className='mb-8 text-4xl md:text-5xl lg:text-7xl font-semibold text-primary-navy leading-[1.1]'>Structure your finances. Grow with confidence.</p>
-                    <p className='mb-16 text-text-gray text-lg md:text-xl font-medium leading-relaxed'>At nubanc, we help entrepreneurs, startups, and growing businesses stay on top of their numbers through clean bookkeeping, tax compliance, financial reporting, and expert finance advisory—so you can make smarter decisions and scale with clarity.</p>
+                    <p className='mb-12 text-text-gray text-lg md:text-xl font-medium leading-relaxed'>At nubanc, we help entrepreneurs, startups, and growing businesses stay on top of their numbers through clean bookkeeping, tax compliance, financial reporting, and expert finance advisory—so you can make smarter decisions and scale with clarity.</p>
                 </motion.div>
 
                 <motion.div

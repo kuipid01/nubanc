@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const SuccessPlan: React.FC = () => {
     return (
-        <section className="py-24 px-6 md:px-16 overflow-hidden">
+        <section className="py-16 px-6 md:px-16 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                     <motion.div
@@ -16,7 +16,7 @@ const SuccessPlan: React.FC = () => {
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-navy mb-8 leading-tight">
                             Plan and Manage for Success
                         </h2>
-                        <p className="text-lg md:text-xl text-text-gray mb-10 leading-relaxed">
+                        <p className="text-lg md:text-xl text-text-gray mb-8 leading-relaxed">
                             We support you with FP&A; budgeting, cashflow forecasting, and variance analysis to help you plan and manage your finances effectively.
                         </p>
 

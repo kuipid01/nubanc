@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CTA: React.FC = () => {
     return (
-        <section id="contact" className="py-24 md:py-32 px-6 md:px-16 bg-linear-to-br from-primary-navy to-[#003366] text-white text-center overflow-hidden">
+        <section id="contact" className="py-20 md:py-28 px-6 md:px-16 bg-linear-to-br from-primary-navy to-[#003366] text-white text-center overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -14,7 +14,7 @@ const CTA: React.FC = () => {
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white leading-[1.1]">
                     Ready to Scale Your Business?
                 </h2>
-                <p className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
                     Book a consultation today and let's structure your finances for growth.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
