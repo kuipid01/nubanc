@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="relative mt-12 bg-linear-to-br from-primary-navy via-primary-navy/95 to-primary-navy text-white py-16 md:py-24 overflow-hidden rounded-[2rem] md:rounded-4xl mx-4 md:mx-8">
+        <section id="about" className="relative mt-12 bg-linear-to-br from-primary-navy via-primary-navy/95 to-primary-navy text-white py-16 md:py-24 overflow-hidden rounded-4xl md:rounded-[3rem] mx-4 md:mx-8">
             <div className="max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                 {/* LEFT SIDE */}
                 <motion.div
