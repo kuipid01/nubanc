@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Hero: React.FC = () => {
 
     return (
-        <section className="relative min-h-[90vh] md:min-h-screen flex items-center pt-24 overflow-hidden bg-mesh text-white">
+        <section className="relative min-h-[90vh] md:min-h-[120vh] pb-10 flex items-center pt-24 overflow-hidden bg-mesh text-white">
             {/* Background blobs */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent-gold/20 rounded-full blur-[100px] animate-pulse" />
