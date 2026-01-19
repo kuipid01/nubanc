@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="relative py-24 bg-white overflow-hidden">
+        <section id="about" className="relative py-16 md:py-24 bg-white overflow-hidden">
 
-            <div className="max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+            <div className="max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-24">
 
                 {/* LEFT TEXT */}
                 <motion.div
@@ -19,7 +19,7 @@ const About: React.FC = () => {
                         About nubanc
                     </span>
 
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-8 leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary-navy mb-6 md:mb-8 leading-tight">
                         Powering your <br /><span className="text-transparent bg-clip-text bg-linear-to-r from-primary-navy to-blue-600">financial growth engine.</span>
                     </h2>
 

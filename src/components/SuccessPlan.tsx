@@ -5,7 +5,7 @@ const SuccessPlan: React.FC = () => {
     return (
         <section className="py-16 px-6 md:px-16 overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                <div className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20">
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -13,10 +13,10 @@ const SuccessPlan: React.FC = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="flex-1 text-left"
                     >
-                        <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-primary-navy mb-8 leading-[1.2]">
+                        <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold text-primary-navy mb-6 md:mb-8 leading-[1.2]">
                             Strategic planning for <br /><span className="text-transparent bg-clip-text bg-linear-to-r from-accent-gold to-yellow-600">long-term victory.</span>
                         </h2>
-                        <p className="text-lg text-slate-600 mb-10 leading-relaxed font-medium">
+                        <p className="text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed font-medium">
                             We support you with FP&A, budgeting, cashflow forecasting, and variance analysis to help you plan and manage your finances effectively.
                         </p>
 

@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary-navy/40 rounded-full blur-[120px]" />
             </div>
 
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
                 {/* LEFT CONTENT */}
                 <div className="text-left max-w-2xl flex-1">
                     <motion.div
