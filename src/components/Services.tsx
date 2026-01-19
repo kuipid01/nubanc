@@ -58,7 +58,7 @@ const Services: React.FC = () => {
     };
 
     return (
-        <section id="services" className="py-16 md:py-24 px-6 md:px-16 bg-slate-50 relative overflow-hidden">
+        <section id="services" className="py-5 md:py-24 px-6 md:px-16 bg-slate-50 relative overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
 
@@ -72,7 +72,7 @@ const Services: React.FC = () => {
                     className='max-w-3xl mb-12 md:mb-20 text-center mx-auto'
                 >
                     <span className="text-accent-gold font-bold tracking-widest text-sm uppercase mb-4 block">Our Expertise</span>
-                    <h2 className='text-4xl md:text-5xl font-bold text-primary-navy mb-6'>Structure your finances.<br />Grow with confidence.</h2>
+                    <h2 className='text-2xl md:text-5xl font-bold text-primary-navy mb-6'>Structure your finances.<br />Grow with confidence.</h2>
                     <p className='text-slate-600 text-lg'>We provide the financial infrastructure that high-growth companies rely on.</p>
                 </motion.div>
 
