@@ -18,19 +18,28 @@ const Navbar: React.FC = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`fixed top-0 left-0 right-0 h-20 flex items-center justify-between px-6 md:px-16 z-1000 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}
+            className={`fixed top-0 left-0 right-0 h-24 flex items-center justify-between px-6 md:px-16 z-1000 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/90 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}
         >
-            <img src="/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
+            <div className={`p-2 rounded-xl transition-all duration-300 ${isScrolled ? '' : 'bg-white/10 backdrop-blur-md border border-white/10'}`}>
+                <img src="/logo.png" alt="logo nubanc" className='w-20 object-cover h-auto' />
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-                <a href="#about" className="font-semibold text-primary-navy hover:text-accent-gold transition-colors">About</a>
-                <a href="#services" className="font-semibold text-primary-navy hover:text-accent-gold transition-colors">Services</a>
-                <a href="#contact" className="font-semibold text-primary-navy hover:text-accent-gold transition-colors">Contact</a>
+                {['About', 'Services', 'Contact'].map((item) => (
+                    <a
+                        key={item}
+                        href={`#${item.toLowerCase()}`}
+                        className={`font-semibold text-base transition-colors duration-300 hover:text-accent-gold ${isScrolled ? 'text-primary-navy' : 'text-white/90'}`}
+                    >
+                        {item}
+                    </a>
+                ))}
+
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-accent-gold text-primary-navy px-7 py-3 rounded-full font-bold text-base transition-all duration-300 hover:bg-accent-gold-hover shadow-[0_4px_15px_rgba(212,175,55,0.3)] hover:shadow-[0_6px_20px_rgba(212,175,55,0.4)]"
+                    className={`px-7 py-3 rounded-xl font-bold text-base transition-all duration-300 shadow-lg ${isScrolled ? 'bg-primary-navy text-white hover:bg-primary-navy/90' : 'bg-white text-primary-navy hover:bg-gray-100'}`}
                     onClick={() => window.open('https://wa.me/2349032830995')}
                 >
                     Book a Consultation
@@ -39,7 +48,7 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Menu Button */}
             <button
-                className="md:hidden text-primary-navy z-1001"
+                className={`md:hidden z-1001 ${isScrolled || isMenuOpen ? 'text-primary-navy' : 'text-white'}`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
                 {isMenuOpen ? (

@@ -58,17 +58,22 @@ const Services: React.FC = () => {
     };
 
     return (
-        <section id="services" className="py-16 px-6 md:px-16 bg-gray-50">
+        <section id="services" className="py-24 px-6 md:px-16 bg-slate-50 relative overflow-hidden">
+            {/* Background Decoration */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
+
+
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className='max-w-4xl'
+                    className='max-w-3xl mb-20 text-center mx-auto'
                 >
-                    <p className='mb-8 text-4xl md:text-5xl lg:text-7xl font-semibold text-primary-navy leading-[1.1]'>Structure your finances. Grow with confidence.</p>
-                    <p className='mb-12 text-text-gray text-lg md:text-xl font-medium leading-relaxed'>At nubanc, we help entrepreneurs, startups, and growing businesses stay on top of their numbers through clean bookkeeping, tax compliance, financial reporting, and expert finance advisory—so you can make smarter decisions and scale with clarity.</p>
+                    <span className="text-accent-gold font-bold tracking-widest text-sm uppercase mb-4 block">Our Expertise</span>
+                    <h2 className='text-4xl md:text-5xl font-bold text-primary-navy mb-6'>Structure your finances.<br />Grow with confidence.</h2>
+                    <p className='text-slate-600 text-lg'>We provide the financial infrastructure that high-growth companies rely on.</p>
                 </motion.div>
 
                 <motion.div
@@ -76,25 +81,48 @@ const Services: React.FC = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]"
                 >
-                    {services.map((service, index) => (
+                    {/* First Large Card which spans 2 columns on large screens */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="md:col-span-2 bg-white rounded-3xl p-10 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+                    >
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-accent-gold/10" />
+
+                        <div className="relative z-10 flex flex-col h-full justify-between items-start">
+                            <div className="w-16 h-16 bg-blue-50 text-primary-navy rounded-2xl flex items-center justify-center text-3xl mb-6">
+                                {services[0].icon}
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-primary-navy mb-3">{services[0].title}</h3>
+                                <p className="text-slate-600 leading-relaxed max-w-lg">{services[0].desc}</p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Standard Cards */}
+                    {services.slice(1).map((service, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
-                            className="bg-white p-10 rounded-[24px] border border-gray-100 shadow-sm transition-shadow duration-300 relative group cursor-default"
+                            whileHover={{ y: -5 }}
+                            className={`bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`} // Make the 3rd one span on medium
                         >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full blur-2xl -mr-10 -mt-10 group-hover:bg-accent-gold/5 transition-colors" />
+
                             {service.tag && (
-                                <span className="absolute top-5 right-5 bg-primary-navy text-accent-gold text-[10px] font-bold px-2 py-1 rounded tracking-wider">
+                                <span className="absolute top-6 right-6 bg-primary-navy text-accent-gold text-[10px] font-bold px-3 py-1 rounded-full tracking-wider shadow-lg">
                                     {service.tag}
                                 </span>
                             )}
-                            <div className="w-14 h-14 bg-accent-gold/10 text-accent-gold rounded-2xl flex items-center justify-center text-3xl mb-6 transition-colors group-hover:bg-accent-gold group-hover:text-primary-navy">
+
+                            <div className="w-12 h-12 bg-slate-50 text-slate-700 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-accent-gold group-hover:text-primary-navy">
                                 {service.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-primary-navy mb-4">{service.title}</h3>
-                            <p className="text-text-gray leading-relaxed">{service.desc}</p>
+
+                            <h3 className="text-xl font-bold text-primary-navy mb-3 group-hover:text-accent-gold-dark transition-colors">{service.title}</h3>
+                            <p className="text-slate-500 text-sm leading-relaxed">{service.desc}</p>
                         </motion.div>
                     ))}
                 </motion.div>
