@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CTA: React.FC = () => {
     return (
-        <section id="contact" className="py-20 md:py-32 px-6 md:px-16 bg-mesh text-white text-center overflow-hidden relative">
+        <section id="contact" className="py-16 md:py-32 px-6 md:px-16 bg-mesh text-white text-center overflow-hidden relative">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-accent-gold/5 rounded-full blur-[120px] pointer-events-none" />
 
             <motion.div
@@ -13,10 +13,10 @@ const CTA: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-4xl mx-auto relative z-10"
             >
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-[1.1] tracking-tight">
+                <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-[1.1] tracking-tight">
                     Every success story starts <br /> with clear numbers.
                 </h2>
-                <p className="text-xl md:text-2xl mb-12 text-white/80 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-2xl mb-8 md:mb-12 text-white/80 max-w-2xl mx-auto leading-relaxed">
                     Book a consultation today and let's structure your finances for growth.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">

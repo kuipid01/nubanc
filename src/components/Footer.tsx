@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#0f0b1a] text-white pt-16 pb-8 px-6 md:px-16 overflow-hidden">
+        <footer className="bg-[#0f0b1a] text-white pt-12 md:pt-16 pb-8 px-6 md:px-16 overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 className="max-w-7xl mx-auto"
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
                     <div className="flex flex-col">
                         <div className='bg-white w-fit px-2 h-fit mb-12 py-1 rounded-full'>
                             <img src="/logo.png" alt="logo nubanc" className='w-52 object-contain h-auto ' />
