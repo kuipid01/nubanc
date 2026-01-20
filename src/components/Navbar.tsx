@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
             className={`fixed top-0 left-0 right-0 h-24 flex items-center justify-between px-6 md:px-16 z-1000 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/90 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}
         >
             <div className={`p-2 rounded-xl transition-all duration-300 ${isScrolled ? '' : 'bg-white/10 backdrop-blur-md border border-white/10'}`}>
-                <img src="/logo.png" alt="logo nubanc" className='w-20 object-cover h-auto' />
+                <img src="/logo.png" alt="logo nubanc" className='w-20 object-contain h-auto' />
             </div>
 
             {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                     <a
                         key={item}
                         href={`#${item.toLowerCase()}`}
-                        className={`font-semibold text-base transition-colors duration-300 hover:text-accent-gold ${isScrolled ? 'text-primary-navy' : 'text-white/90'}`}
+                        className={`font-semibold text-base transition-colors duration-300 hover:text-accent-gold ${isScrolled ? 'text-primary-navy' : 'text-black/90'}`}
                     >
                         {item}
                     </a>

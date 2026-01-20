@@ -34,7 +34,7 @@ const About: React.FC = () => {
 
                     <div className="mt-10 flex gap-8">
                         <div>
-                            <p className="text-4xl font-bold text-primary-navy">500+</p>
+                            <p className="text-4xl font-bold text-primary-navy">25+</p>
                             <p className="text-gray-500 text-sm mt-1">Clients Served</p>
                         </div>
                         <div>
